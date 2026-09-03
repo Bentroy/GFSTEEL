@@ -1,3 +1,4 @@
+import { ArrowRight } from 'lucide-react'
 import { images } from '../data'
 
 export default function About() {
@@ -14,8 +15,8 @@ export default function About() {
         </div>
 
         <div>
-          <p className="font-body text-sm tracking-wide text-ember-400 mb-3">About us</p>
-          <h2 className="font-display text-4xl sm:text-5xl text-steel-100 leading-tight">
+          <p className="font-body text-xs font-semibold tracking-[0.2em] uppercase text-ember-400 mb-3">About us</p>
+          <h2 className="font-display font-black uppercase text-4xl sm:text-5xl text-steel-100 leading-[0.95]">
             Your local partner for iron, steel &amp; building materials
           </h2>
           <p className="mt-6 font-body text-steel-400 max-w-lg">
@@ -35,9 +36,10 @@ export default function About() {
 
           <a
             href="#contact"
-            className="mt-8 inline-flex items-center rounded-sm border border-steel-500 hover:border-steel-300 text-steel-100 px-7 py-3.5 font-body font-medium transition-colors"
+            className="mt-8 inline-flex items-center gap-2 border border-steel-500 hover:border-steel-300 text-steel-100 px-7 py-3.5 font-body font-semibold text-sm uppercase tracking-wide transition-colors"
           >
             Contact G.F Steel Technology
+            <ArrowRight size={16} strokeWidth={2.5} />
           </a>
         </div>
       </div>

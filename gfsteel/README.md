@@ -1,16 +1,59 @@
-# React + Vite
+# G.F Steel Technology — React/Vite/Tailwind rebuild
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Recreation of the Lovable demo (https://gfsteel.lovable.app/) as a
+standalone Vite + React + Tailwind project, ready to open in VS Code.
 
-Currently, two official plugins are available:
+## Setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm install
+npm run dev
+```
 
-## React Compiler
+Open http://localhost:5173
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Build for production
 
-## Expanding the ESLint configuration
+```bash
+npm run build
+npm run preview
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Output goes to `dist/`.
+
+## Structure
+
+```
+src/
+  App.jsx              — assembles all sections
+  data.js              — all copy, image URLs, contact details in one place
+  index.css            — Tailwind directives + base styles
+  components/
+    Navbar.jsx
+    Hero.jsx
+    Highlights.jsx     — the 4-up strip under the hero
+    Products.jsx
+    About.jsx
+    WhyUs.jsx
+    WhoWeServe.jsx
+    HowToOrder.jsx
+    CtaBanner.jsx       — orange "Let's talk materials" band
+    QuoteForm.jsx
+    Contact.jsx         — address + embedded map
+    Footer.jsx
+```
+
+## Notes / next steps
+
+- **Images**: currently pointing at the original Lovable-hosted asset URLs
+  in `src/data.js` (`images` object) so the site renders immediately. Drop
+  your own photos into `src/assets/` and swap the `import`/paths in
+  `data.js` when you have final images.
+- **Quote form**: `QuoteForm.jsx` currently just confirms locally on submit.
+  Wire the `handleSubmit` function up to your backend, an email API, or a
+  form service like Formspree/Getform to actually receive submissions.
+- **Fonts**: Barlow Condensed (display) + Inter (body), loaded from Google
+  Fonts in `index.html`. Update there if you change typefaces.
+- **Colors**: the `steel` (dark neutrals) and `ember` (orange accent)
+  palettes are defined in `tailwind.config.js` — adjust hex values there to
+  match final brand colors.

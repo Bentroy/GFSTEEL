@@ -5,9 +5,14 @@ export default function Footer() {
     <footer className="bg-steel-900 border-t border-steel-800 py-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-10 grid sm:grid-cols-3 gap-10">
         <div>
-          <p className="font-display text-2xl text-steel-100">
-            G.F <span className="text-ember-500">Steel</span> Technology
-          </p>
+          <div className="flex items-center gap-3">
+            <span className="flex h-8 w-8 items-center justify-center bg-ember-600 font-display font-black text-white text-xs">
+              GF
+            </span>
+            <p className="font-display font-bold uppercase text-lg text-steel-100">
+              G.F <span className="text-ember-500">Steel</span> Technology
+            </p>
+          </div>
           <p className="mt-3 font-body text-sm text-steel-400 max-w-xs">
             Iron, steel and building materials supplier in Lagos.
           </p>

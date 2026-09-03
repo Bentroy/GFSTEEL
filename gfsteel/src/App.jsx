@@ -13,7 +13,7 @@ import Footer from './components/Footer'
 
 export default function App() {
   return (
-    <div className="bg-steel-950 min-h-screen">
+    <div className="bg-cream min-h-screen">
       <Navbar />
       <main>
         <Hero />
