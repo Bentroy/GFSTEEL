@@ -1,3 +1,4 @@
+import { MessageCircle } from 'lucide-react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Highlights from './components/Highlights'
@@ -10,6 +11,7 @@ import CtaBanner from './components/CtaBanner'
 import QuoteForm from './components/QuoteForm'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import { whatsappHref } from './data'
 
 export default function App() {
   return (
@@ -28,6 +30,15 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <a
+        href={whatsappHref}
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Chat with G.F Steel Technology on WhatsApp"
+        className="fixed bottom-5 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-ember-600 text-white shadow-xl transition-transform hover:scale-105"
+      >
+        <MessageCircle size={25} />
+      </a>
     </div>
   )
 }
