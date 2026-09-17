@@ -1,7 +1,7 @@
-import { MapPin, Ruler, Truck, MessageCircle } from 'lucide-react'
+import { MapPin, Layers, Truck, MessageCircle } from 'lucide-react'
 import { whyUs } from '../data'
 
-const icons = [MapPin, Ruler, Truck, MessageCircle]
+const icons = [MapPin, Layers, Truck, MessageCircle]
 
 export default function WhyUs() {
   return (
@@ -24,12 +24,12 @@ export default function WhyUs() {
           {whyUs.map((w, i) => {
             const Icon = icons[i]
             return (
-              <div key={w.n} className="border border-steel-950/10 bg-cream p-6 transition-transform hover:-translate-y-1 sm:p-7">
+              <div key={w.n} className="border border-steel-950/10 p-6">
                 <div className="flex items-center justify-between">
                   <span className="font-display text-xs font-bold text-ember-600">{w.n}</span>
-                  <Icon size={18} className="text-steel-500" strokeWidth={1.75} />
+                  <Icon size={18} className="text-ember-600" strokeWidth={1.75} />
                 </div>
-                <h3 className="font-display font-bold uppercase text-lg text-steel-950 mt-10">{w.title}</h3>
+                <h3 className="font-display font-bold uppercase text-lg text-steel-950 mt-4">{w.title}</h3>
                 <p className="mt-2 font-body text-sm text-steel-600">{w.copy}</p>
               </div>
             )
